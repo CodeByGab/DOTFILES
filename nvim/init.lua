@@ -17,8 +17,11 @@ require("lazy").setup("plugins")
 
 local time = os.date("*t")
 if time.hour <= 9 or time.hour >= 18 then
+  --macchiato best dark theme
+  --latte light theme catppuccin
   vim.cmd.colorscheme("catppuccin-macchiato")
 else
-  vim.o.background = "light"
-  vim.cmd([[colorscheme gruvbox]])
+  vim.cmd.colorscheme("catppuccin-macchiato")
+  --vim.o.background = "light"
+  --vim.cmd([[colorscheme gruvbox]])
 end
